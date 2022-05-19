@@ -1,17 +1,15 @@
-//Write a function that takes a list of strings as an argument and returns a filtered list containing the same elements but with the 'geese' removed.
+//Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
 
-//The geese are any strings in the following array, which is pre-populated in your solution:
+//For example:
 
- // ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
-//For example, if this array were passed as an argument:
+//summation(2) -> 3
+//1 + 2
 
- //["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]
-//Your function would return the following array:
+//summation(8) -> 36
+//1 + 2 + 3 + 4 + 5 + 6 + 7 + 8
 
-//["Mallard", "Hook Bill", "Crested", "Blue Swedish"]
-//The elements in the returned array should be in the same order as in the initial array passed to your function, albeit with the 'geese' removed. Note that all of the strings will be in the same case as those provided, and some elements may be repeated.
+function summation(num) {
+    return num * (num + 1) / 2
+  }
 
-function gooseFilter (birds) {
-    let geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
-    return birds.filter( bird => geese.indexOf(bird) < 0 );
-  };
+  
