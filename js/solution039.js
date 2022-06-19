@@ -1,23 +1,16 @@
-//Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
 
-//The output should be two capital letters with a dot separating them.
+//Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
 
-//It should look like this:
+//Example:
+//["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
 
-//Sam Harris => S.H
-
-//patrick feeney => P.F
-
-//STRINGSARRAYS
+//None of the arrays will be empty, so you don't have to worry about that!
 
 
-
-function abbrevName(name){
-    let intials = name[0] + "."
-    for (let i = 0; i < name.length; i++){
-        if (name[i] == ' '){
-            intials += name[i+1]
-        }
+function removeEveryOther(arr){
+    let newArr=[]
+  for (var i = 0; i < arr.length; i+=2){
+    newArr.push(arr[i])
     }
-return intials.toLocaleUpperCase()
-}
+  return newArr
+  }
